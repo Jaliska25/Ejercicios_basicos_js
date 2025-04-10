@@ -10,3 +10,14 @@ const foodSchedule = [
   { name: 'Rice', isVegan: true },
   { name: 'Pasta', isVegan: true }
 ]
+let fruitIndex = 0
+for (const food of foodSchedule) {
+  if (food.isVegan === false) {
+    if (fruitIndex < fruits.length) {
+      food.name = fruits[fruitIndex]
+      food.isVegan = true
+      fruitIndex++
+    }
+  }
+}
+console.log(foodSchedule)
